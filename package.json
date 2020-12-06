@@ -1,10 +1,10 @@
 {
-  "name": "helloapp",
+  "name": "stocktickermichelle",
   "version": "1.0.0",
   "description": "node app ",
-  "main": "testingHeroku.js",
+  "main": "readStockTicker.js",
   "scripts": {
-    "start": "testingHeroku.js"
+    "start": "node readStockTicker.js"
   },
   "repository": {
     "type": "git",
