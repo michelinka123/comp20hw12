@@ -1,6 +1,6 @@
 var http = require('http');
-var port = process.env.PORT || 3000;
 var url = require('url');
+var port = process.env.PORT || 3000;
 
 // const MongoClient = require('mongodb').MongoClient;
 // const MongoUrl = 
@@ -75,7 +75,6 @@ http.createServer(function(req, res)
 // 			}
 
 // 		});
-}
 
 	res.end();
 	console.log("Connect successful! Whoopee");
