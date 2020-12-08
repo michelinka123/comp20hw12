@@ -3,8 +3,8 @@ var url = require('url');
 var port = process.env.PORT || 3000;
 
 const MongoClient = require('mongodb').MongoClient;
-const MongoUrl = 
-"mongodb+srv://Mars1234:Mars1234@cluster0.dc97w.mongodb.net/CompanyData?retryWrites=true&w=majority";
+// const MongoUrl = 
+// "mongodb+srv://Mars1234:Mars1234@cluster0.dc97w.mongodb.net/CompanyData?retryWrites=true&w=majority";
 
 http.createServer(function(req, res)
 {
