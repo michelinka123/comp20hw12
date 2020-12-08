@@ -2,9 +2,9 @@
   "name": "stocktickermichelle",
   "version": "1.0.0",
   "description": "node app ",
-  "main": "readStockTicker.js",
+  "main": "readStockTicker2.js",
   "scripts": {
-    "start": "node readStockTicker.js"
+    "start": "node readStockTicker2.js"
   },
   "repository": {
     "type": "git",
