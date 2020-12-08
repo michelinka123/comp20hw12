@@ -2,9 +2,9 @@ var http = require('http');
 var url = require('url');
 var port = process.env.PORT || 3000;
 
-// const MongoClient = require('mongodb').MongoClient;
-// const MongoUrl = 
-// "mongodb+srv://Mars1234:Mars1234@cluster0.dc97w.mongodb.net/CompanyData?retryWrites=true&w=majority";
+const MongoClient = require('mongodb').MongoClient;
+const MongoUrl = 
+"mongodb+srv://Mars1234:Mars1234@cluster0.dc97w.mongodb.net/CompanyData?retryWrites=true&w=majority";
 
 http.createServer(function(req, res)
 {
@@ -14,6 +14,7 @@ http.createServer(function(req, res)
 	var qobj = url.parse(req.url, true).query;
 	var ticker = qobj.ticker;
 	var company = qobj.company;
+	res.write(company);
 	// if (ticker == "")
 	// {
 	// 	res.write("You did not select a ticker" + "<br>" + "The company you selected is: " + company);
