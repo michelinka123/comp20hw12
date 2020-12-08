@@ -34,47 +34,47 @@ http.createServer(function(req, res)
 				return; 
 			}
 
-			var database = db.db("CompanyData");
-			var collection = database.collection("companies");
-			if (ticker == "")
-			{
-				theQuery = {"company":company};
-				collection.find(theQuery).toArray(function(err, items)
-				{
-					if (err)
-					{
-						res.write("Error: " + err);
-					}
-					else
-					{
-						res.write("Ticker(s) for the company " + "<strong>" + company + "</strong>" + ":" + "<br>");
-						for (i=0; i<items.length; i++)
-						{	
-							res.write(items[i].ticker) + "<br>";
-						}
-					}
-				});
-			}
-			if (company == "")
-			{
-				theQuery = {"ticker":ticker};
-				collection.find(theQuery).toArray(function(err, items)
-				{
-					if (err)
-					{
-						res.write("Error: " + err);
-					}
-					else
-					{
-						res.write("Companies with the ticker " + "<strong>" + ticker + "</strong>" + ":" + "<br>");
-						for (i=0; i<items.length; i++)
-						{	
-							res.write(items[i].company + "<br>");
-						}
-						db.close();
-					}
-				});
-			}
+// 			var database = db.db("CompanyData");
+// 			var collection = database.collection("companies");
+// 			if (ticker == "")
+// 			{
+// 				theQuery = {"company":company};
+// 				collection.find(theQuery).toArray(function(err, items)
+// 				{
+// 					if (err)
+// 					{
+// 						res.write("Error: " + err);
+// 					}
+// 					else
+// 					{
+// 						res.write("Ticker(s) for the company " + "<strong>" + company + "</strong>" + ":" + "<br>");
+// 						for (i=0; i<items.length; i++)
+// 						{	
+// 							res.write(items[i].ticker) + "<br>";
+// 						}
+// 					}
+// 				});
+// 			}
+// 			if (company == "")
+// 			{
+// 				theQuery = {"ticker":ticker};
+// 				collection.find(theQuery).toArray(function(err, items)
+// 				{
+// 					if (err)
+// 					{
+// 						res.write("Error: " + err);
+// 					}
+// 					else
+// 					{
+// 						res.write("Companies with the ticker " + "<strong>" + ticker + "</strong>" + ":" + "<br>");
+// 						for (i=0; i<items.length; i++)
+// 						{	
+// 							res.write(items[i].company + "<br>");
+// 						}
+// 						db.close();
+// 					}
+// 				});
+// 			}
 
 		});
 
