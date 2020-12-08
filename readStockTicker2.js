@@ -15,16 +15,16 @@ http.createServer(function(req, res)
 	var qobj = url.parse(req.url, true).query;
 	var ticker = qobj.ticker;
 	var company = qobj.company;
-	res.write(company);
-	// if (ticker == "")
-	// {
-	// 	res.write("You did not select a ticker" + "<br>" + "The company you selected is: " + company);
-	// }
+// 	res.write(company);
+	if (ticker == "")
+	{
+		res.write("You did not select a ticker" + "<br>" + "The company you selected is: " + company);
+	}
 
-	// if (company == "")
-	// {
-	// 	res.write("The ticker you selected is: " + ticker + "<br>" + "You did not select a company");
-	// }
+	if (company == "")
+	{
+		res.write("The ticker you selected is: " + ticker + "<br>" + "You did not select a company");
+	}
 
 // 		MongoClient.connect(MongoUrl, {useUnifiedTopology: true}, function(err, db)
 // 		{
