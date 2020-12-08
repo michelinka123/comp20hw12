@@ -7,7 +7,7 @@ http.createServer(function (req, res) {
   var qobj = url.parse(req.url, true).query;
 	var ticker = qobj.ticker;
 	var company = qobj.company;
-   res.write("<h2>company</h2>");
+   res.write(company);
    res.write ("Success!  This app is deployed online");
    res.end();
 }).listen(port);
